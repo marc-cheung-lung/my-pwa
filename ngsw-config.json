@@ -26,4 +26,15 @@
       }
     }
   ]
+    "dataGroups": [
+    {
+      "name": "api",
+      "urls": ["/api/hello"],
+      "cacheConfig": {
+        "maxSize": 1,
+        "maxAge": "1m",
+        "strategy": "freshness"
+      }
+    }
+  ]
 }
