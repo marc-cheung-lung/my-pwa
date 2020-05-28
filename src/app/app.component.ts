@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-pwa';
+  hello$ = this.httpClient.get('api/hello', {responseType: 'text'});
+
+constructor(private httpClient: HttpClient) {}
 }
